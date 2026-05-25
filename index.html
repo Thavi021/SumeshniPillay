@@ -1,100 +1,171 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sumeshni Pillay | CV</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sumeshni Pillay | CV</title>
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-        body {
-            background: #f4f6f9;
-            color: #333;
-            line-height: 1.6;
-        }
+<style>
+:root {
+    --primary: #0f172a;
+    --accent: #2563eb;
+    --light: #f8fafc;
+    --text: #1f2937;
+}
 
-        header {
-            background: #1e3a8a;
-            color: white;
-            padding: 40px 20px;
-            text-align: center;
-        }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        header h1 {
-            font-size: 2.5em;
-        }
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--light);
+    color: var(--text);
+}
 
-        header p {
-            font-size: 1.2em;
-            margin-top: 10px;
-        }
+/* HEADER */
+header {
+    background: linear-gradient(135deg, #0f172a, #2563eb);
+    color: white;
+    text-align: center;
+    padding: 60px 20px 50px;
+}
 
-        .container {
-            max-width: 1000px;
-            margin: 20px auto;
-            padding: 20px;
-        }
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
 
-        section {
-            margin-bottom: 30px;
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-        }
+header p {
+    margin-top: 10px;
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
 
-        h2 {
-            color: #1e3a8a;
-            margin-bottom: 10px;
-            border-bottom: 2px solid #ddd;
-            padding-bottom: 5px;
-        }
+/* CONTAINER */
+.container {
+    max-width: 1100px;
+    margin: -40px auto 30px;
+    padding: 20px;
+}
 
-        ul {
-            margin-left: 20px;
-        }
+/* CARD SECTIONS */
+section {
+    background: white;
+    margin-bottom: 25px;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    transition: transform 0.2s;
+}
 
-        .job {
-            margin-bottom: 20px;
-        }
+section:hover {
+    transform: translateY(-5px);
+}
 
-        .job h3 {
-            color: #111;
-        }
+/* SECTION TITLES */
+h2 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    border-left: 5px solid var(--accent);
+    padding-left: 10px;
+    color: var(--primary);
+}
 
-        .job span {
-            color: gray;
-            font-size: 0.9em;
-        }
+/* PROFILE */
+.profile {
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
 
-        .toggle-btn {
-            margin-top: 10px;
-            padding: 8px 12px;
-            border: none;
-            background: #1e3a8a;
-            color: white;
-            cursor: pointer;
-            border-radius: 5px;
-        }
+/* JOB */
+.job {
+    margin-bottom: 20px;
+}
 
-        .hidden {
-            display: none;
-        }
+.job h3 {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
 
-        footer {
-            text-align: center;
-            padding: 15px;
-            font-size: 0.9em;
-            color: gray;
-        }
-    </style>
+.job span {
+    font-size: 0.85rem;
+    color: gray;
+}
+
+/* LIST */
+ul {
+    margin-top: 10px;
+    margin-left: 18px;
+}
+
+ul li {
+    margin-bottom: 6px;
+}
+
+/* BUTTON */
+button {
+    margin-top: 10px;
+    padding: 6px 12px;
+    background: var(--accent);
+    border: none;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.8rem;
+}
+
+button:hover {
+    background: #1d4ed8;
+}
+
+.hidden {
+    display: none;
+}
+
+/* GRID FOR EDUCATION + CERTS */
+.grid {
+    display: grid;
+    gap: 20px;
+}
+
+@media(min-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    font-size: 0.8rem;
+    color: gray;
+    padding: 20px;
+}
+
+/* ANIMATION */
+.fade-in {
+    animation: fadeInUp 0.8s ease forwards;
+    opacity: 0;
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translateY(15px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+</style>
 </head>
 
 <body>
@@ -106,71 +177,73 @@
 
 <div class="container">
 
-    <section>
+    <section class="fade-in">
         <h2>Profile</h2>
-        <p>
+        <p class="profile">
             Highly driven Medical Technologist and Technical Trainer with over 10 years of experience 
             in high complexity laboratory environments. Proven expertise in clinical diagnostics and 
-            strong experience in designing and implementing training programs for laboratory professionals.
-            Skilled in bridging complex laboratory protocols with staff proficiency, ensuring quality 
-            management and regulatory compliance.
+            implementing technical training programs across Haematology, Microbiology, Chemistry and Morphology.
+            Passionate about bridging laboratory protocols with workforce capability to ensure full regulatory compliance.
         </p>
     </section>
 
-    <section>
+    <section class="fade-in">
         <h2>Experience</h2>
 
         <div class="job">
             <h3>Technical Trainer Medical Technologist</h3>
             <span>Ampath Laboratories | 2022 — Present</span>
-            <button class="toggle-btn" onclick="toggleDetails(this)">Show Details</button>
+            <button onclick="toggle(this)">Show Details</button>
             <ul class="hidden">
-                <li>Facilitate training and mentoring of laboratory personnel in clinical pathology.</li>
-                <li>Design training material aligned with industry syllabi and SOPs.</li>
-                <li>Conduct internal audits according to ISO15189 standards.</li>
-                <li>Ensure compliance with HPCSA and ISO standards during audits.</li>
+                <li>Training and mentoring laboratory professionals in clinical pathology.</li>
+                <li>Developing structured training programs aligned with industry standards.</li>
+                <li>Conducting ISO15189 internal audits.</li>
+                <li>Ensuring HPCSA compliance and audit readiness.</li>
             </ul>
         </div>
 
         <div class="job">
             <h3>Senior Medical Technologist (Clinical Pathology)</h3>
             <span>Ampath Laboratories | 2017 — 2022</span>
-            <button class="toggle-btn" onclick="toggleDetails(this)">Show Details</button>
+            <button onclick="toggle(this)">Show Details</button>
             <ul class="hidden">
-                <li>Performed laboratory analysis in haematology, microbiology, chemistry and morphology.</li>
-                <li>Managed quality control systems and diagnostic analyzers.</li>
-                <li>Maintained and troubleshot medical equipment.</li>
-                <li>Handled night shift duties and diagnostic reporting.</li>
-                <li>Assisted in accreditation audit preparation.</li>
+                <li>Performed laboratory diagnostics across multiple disciplines.</li>
+                <li>Managed quality control systems and calibrations.</li>
+                <li>Maintained and troubleshot analyzers (Roche, Sysmex, Siemens).</li>
+                <li>Handled night shift diagnostics and reporting.</li>
+                <li>Supported accreditation audits.</li>
             </ul>
         </div>
 
     </section>
 
-    <section>
-        <h2>Education</h2>
-        <ul>
-            <li><strong>HPCSA</strong> – Independent Practice Medical Technologist (2017)</li>
-            <li><strong>University of Johannesburg</strong> – BTech & National Diploma in Biomedical Technology (2012–2015)</li>
-            <li><strong>Mondeor High School</strong> – High School Certificate (2011)</li>
-        </ul>
-    </section>
+    <div class="grid">
 
-    <section>
-        <h2>Certifications</h2>
-        <ul>
-            <li>Registered with HPCSA</li>
-            <li>Microsoft Excel Advanced Certification</li>
-            <li>On-the-Job Training – Ampath Laboratories</li>
-            <li>Grays Assessor Certificate</li>
-            <li>Internal Auditing Certificate</li>
-            <li>Good Laboratory Practice Certification</li>
-            <li>Quality Control E-Learning</li>
-            <li>Health & Safety (SHE) Certification</li>
-        </ul>
-    </section>
+        <section class="fade-in">
+            <h2>Education</h2>
+            <ul>
+                <li><strong>HPCSA</strong> – Independent Practice (2017)</li>
+                <li><strong>UJ</strong> – Biomedical Technology (2012–2015)</li>
+                <li><strong>Mondeor High</strong> – Matric (2011)</li>
+            </ul>
+        </section>
 
-    <section>
+        <section class="fade-in">
+            <h2>Certifications</h2>
+            <ul>
+                <li>HPCSA Registered</li>
+                <li>Microsoft Excel Advanced</li>
+                <li>Grays Assessor</li>
+                <li>Internal Auditing</li>
+                <li>Good Laboratory Practice</li>
+                <li>Quality Control Training</li>
+                <li>Health & Safety (SHE)</li>
+            </ul>
+        </section>
+
+    </div>
+
+    <section class="fade-in">
         <h2>References</h2>
         <p>Available upon request.</p>
     </section>
@@ -182,15 +255,23 @@
 </footer>
 
 <script>
-    function toggleDetails(button) {
-        const list = button.nextElementSibling;
-        list.classList.toggle("hidden");
-        button.textContent = list.classList.contains("hidden") ? "Show Details" : "Hide Details";
-    }
+function toggle(btn) {
+    const list = btn.nextElementSibling;
+    list.classList.toggle("hidden");
+    btn.textContent = list.classList.contains("hidden") ? "Show Details" : "Hide Details";
+}
 
-    // Auto update year
-    document.getElementById("year").textContent = new Date().getFullYear();
+/* Simple scroll animation trigger */
+document.querySelectorAll('.fade-in').forEach((el, i) => {
+    setTimeout(() => {
+        el.style.opacity = 1;
+    }, i * 200);
+});
+
+/* Auto year */
+document.getElementById("year").textContent = new Date().getFullYear();
 </script>
 
 </body>
 </html>
+``
